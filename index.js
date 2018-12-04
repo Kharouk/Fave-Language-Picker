@@ -21,26 +21,22 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  const result = req.session.result;
-  console.log(result);
-  if (result !== undefined) {
-    res.render("index", { title: "Github Language Picker" });
-  } else {
-    res.render("index", {
-      title: "Github Language Picker"
-    });
-  }
+  res.render("index", { title: "Github Language Picker" });
 });
 
 app.post("/user", (req, res) => {
-  req.session.result = fetch(
-    `https://api.github.com/search/users?q=${req.body.gitUser}`
-  )
+  fetch(`https://api.github.com/search/users?q=${req.body.gitUser}`)
     .then(response => response.json())
     .then(myJson => {
-      return JSON.stringify(myJson);
+      req.session.result = JSON.stringify(myJson);
+      res.redirect("/results/");
     });
-  res.redirect("/");
+});
+
+app.get("/results/", (req, res) => {
+  console.log("in results ", req.session.result);
+  const result = req.session.result;
+  res.render("result", { result });
 });
 
 app.listen(port, () => console.log(`App listening on port ${port}`));
