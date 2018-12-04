@@ -3,3 +3,12 @@ Unsure on what your favourite programming language is? Have millions of repos an
 
 
 ## Start Development Server
+If you have nodemon installed, just run:
+```
+nodemon
+```
+
+Otherwise, start the server by running:
+```bash
+npm start
+```
