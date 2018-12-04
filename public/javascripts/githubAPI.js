@@ -1,7 +1,9 @@
+const fetch = require('node-fetch');
+
 const fetchUser = (user) => {
-  fetch('http://example.com/movies.json')
+  fetch(`https://api.github.com/search/users?q=${user}`)
     .then(response => response.json())
-    .then((myJson) => {
-      console.log(JSON.stringify(myJson));
-    });
+    .then(myJson => JSON.stringify(myJson));
 };
+
+module.exports = fetchUser;
