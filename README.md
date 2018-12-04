@@ -12,3 +12,9 @@ Otherwise, start the server by running:
 ```bash
 npm start
 ```
+
+## Tests
+Run tests with this command:
+```bash
+npm test
+```
