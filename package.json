@@ -1,0 +1,21 @@
+{
+  "name": "github-fave",
+  "version": "1.0.0",
+  "description": "Unsure on what your favourite programming language is? Have millions of repos and still guessing if you use Ruby over JavaScript? Use this renowned application to figure out your most used language!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
