@@ -28,15 +28,15 @@ app.post("/user", (req, res) => {
   fetch(`https://api.github.com/search/users?q=${req.body.gitUser}`)
     .then(response => response.json())
     .then(myJson => {
-      req.session.result = JSON.stringify(myJson);
+      req.session.result = myJson;
       res.redirect("/results/");
     });
 });
 
 app.get("/results/", (req, res) => {
   console.log("in results ", req.session.result);
-  const result = req.session.result;
-  res.render("result", { result });
+  const data = req.session.result;
+  res.render("result", { data });
 });
 
 app.listen(port, () => console.log(`App listening on port ${port}`));
