@@ -11,8 +11,7 @@
     <table>
         <% for(var i=0; i < data.items.length; i++) { %>
            <tr>
-             <td><%= data.items[i].id %></td>
-             <td><%= data.items[i].login %></td>
+             <td><a href="/user/<%= data.items[i].login %>"><%= data.items[i].login %></a></td>
            </tr>
         <% } %>
       </table>
