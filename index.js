@@ -23,16 +23,12 @@ app.get('/', (req, res) => {
 });
 
 app.post('/user', (req, res) => {
-  fetch(`https://api.github.com/search/users?q=${req.body.gitUser}`)
+  fetch(`https://api.github.com/users/${req.body.gitUser}`)
     .then(response => response.json())
     .then((myJson) => {
       req.session.result = myJson;
       res.redirect('/results/');
     });
-});
-
-app.get('/user/:username', (req, res) => {
-  res.render('user', { username: req.params.username });
 });
 
 app.get('/results/', (req, res) => {

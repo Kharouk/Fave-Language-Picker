@@ -7,13 +7,6 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Choose your Exact Username:</h1>
-    <table>
-        <% for(var i=0; i < data.items.length; i++) { %>
-           <tr>
-             <td><a href="/user/<%= data.items[i].login %>"><%= data.items[i].login %></a></td>
-           </tr>
-        <% } %>
-      </table>
+  <h1><%= data.login %></h1>
 </body>
 </html>
