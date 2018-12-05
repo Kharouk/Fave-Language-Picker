@@ -11,6 +11,9 @@ const session = require('express-session');
 const fetch = require('node-fetch');
 const bodyParser = require('body-parser');
 
+// Scripts
+const findCommonLanguage = require('./javascripts/findLanguage');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({ secret: 'banana bread' }));
@@ -32,39 +35,20 @@ app.post('/user', (req, res) => {
 });
 
 app.get('/results/', (req, res) => {
-  const data = req.session.result;
+  const repoData = req.session.result;
+  if (repoData.message === 'Not Found') {
+    res.redirect('/');
+  }
+
   const aryOfLanguages = [];
-  data.forEach((repo) => {
+  repoData.forEach((repo) => {
     aryOfLanguages.push(repo.language);
   });
 
   res.render('result', {
-    username: data[0].owner.login,
-    repos: data,
+    username: repoData[0].owner.login,
     language: findCommonLanguage(aryOfLanguages),
   });
 });
 
 app.listen(port, () => console.log(`App listening on port ${port}`));
-
-const findCommonLanguage = (aryOfLanguages) => {
-  let maxCount = 1;
-  let langCount = 0;
-  let result;
-  for (let i = 0; i < aryOfLanguages.length; i += 1) {
-    for (let j = i; j < aryOfLanguages.length; j += 1) {
-      if (aryOfLanguages[i] === aryOfLanguages[j]) {
-        langCount += 1;
-        if (maxCount < langCount) {
-          maxCount = langCount;
-          result = aryOfLanguages[i];
-        }
-      }
-    }
-    langCount = 0;
-  }
-  if (result != null) {
-    return result;
-  }
-  return 'Sorry, you prefer to write READMEs!';
-};
