@@ -15,9 +15,9 @@ const findCommonLanguage = (aryOfLanguages) => {
     langCount = 0;
   }
   if (result != null) {
-    return `Your most used language is: ${result}`;
+    return result;
   }
-  return 'Sorry, you prefer to write READMEs!';
+  return 'READMEs!';
 };
 
 module.exports = findCommonLanguage;
