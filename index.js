@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/user', (req, res) => {
-  fetch(`https://api.github.com/users/${req.body.gitUser}`)
+  fetch(`https://api.github.com/users/${req.body.gitUser}/repos`)
     .then(response => response.json())
     .then((myJson) => {
       req.session.result = myJson;
@@ -33,7 +33,7 @@ app.post('/user', (req, res) => {
 
 app.get('/results/', (req, res) => {
   const data = req.session.result;
-  res.render('result', { data });
+  res.render('result', { username: data[0].owner.login, repos: data });
 });
 
 app.listen(port, () => console.log(`App listening on port ${port}`));

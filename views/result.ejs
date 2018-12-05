@@ -7,6 +7,15 @@
   <title>Document</title>
 </head>
 <body>
-  <h1><%= data.login %></h1>
+  <h1><%= username %></h1>
+  <table>
+  <% for(var i=0; i < repos.length; i++) { %>
+     <tr>
+       <td><%= repos[i].name %></td>
+       <td><%= repos[i].language %></td>
+     </tr>
+  <% } %>
+  </table>
+  <a href="/">Go Home</a>
 </body>
 </html>
