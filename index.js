@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Github Language Picker' });
+  res.render('index', { title: 'Github Language Picker', alertMessage: req.session.active });
 });
 
 app.post('/user', (req, res) => {
@@ -37,9 +37,11 @@ app.post('/user', (req, res) => {
 app.get('/results/', (req, res) => {
   const repoData = req.session.result;
   if (repoData.message === 'Not Found') {
+    req.session.active = true;
     res.redirect('/');
   }
 
+  req.session.active = false;
   const aryOfLanguages = [];
   repoData.forEach((repo) => {
     aryOfLanguages.push(repo.language);
