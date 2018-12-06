@@ -1,7 +1,11 @@
 describe('Protractor Demo App', () => {
-  it('should have a title', () => {
-    browser.get('http://localhost:3000');
+  beforeEach(() => {
+    browser.ignoreSynchronization = true;
+  });
 
-    expect(browser.getTitle()).toEqual('Github Language Picker');
+  it('should have a title', () => {
+    browser.get('/');
+    const title = browser.driver.findElement(by.css('#title')).getText();
+    expect(title).toContain('Github Language Picker');
   });
 });

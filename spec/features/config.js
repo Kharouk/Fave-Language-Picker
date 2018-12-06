@@ -1,5 +1,6 @@
 exports.config = {
+  seleniumAddress: 'http://localhost:4444/wd/hub',
   framework: 'jasmine',
-  seleniumAddress: 'http://localhost:4444/',
+  baseUrl: 'http://localhost:3000',
   specs: ['checkGithubAPIWorksSpec.js'],
 };

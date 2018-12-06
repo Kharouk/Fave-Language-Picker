@@ -4,10 +4,11 @@
   "description": "Unsure on what your favourite programming language is? Have millions of repos and still guessing if you use Ruby over JavaScript? Use this renowned application to figure out your most used language!",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "jasmine",
     "lint": "eslint .",
-    "feature-test": "protractor ./spec/features/config.js",
-    "start": "node index.js"
+    "webdriver-manager": "./node_modules/protractor/bin/webdriver-manager",
+    "feature-test": "protractor ./spec/features/config.js"
   },
   "keywords": [],
   "author": "",
