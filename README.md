@@ -53,9 +53,9 @@ I also wanted to challenge myself. I wanted to create more applications using Ja
 ### Using the Application on a long-term basis:
 I didn't just want to solve the challenge. I wanted to write an application that was refactored and could be added to. Using a framework like Express, I know that I could add additional routes to check what spoken language does the user know. How many followers do they have? All I'd have to do is create more routes. 
 
-I also wanted to make sure the code was kept neat and tidy, using ESLint as well as making sure my tests were passing. I talk about this process more in the Further Development Section.
+I also wanted to make sure the code was kept neat and tidy, using ESLint as well as making sure my tests were passing. I talk about this process more in the Further Development section below.
 
-I also wanted to make sure these automation checks were in place in case another developer would like to contribute and add to the project. 
+I also wanted to make sure these automation checks were in place in case another developer would like to contribute and add to the project.
 
 ### Testing the Application's API calls:
 Currently, the fetch requests being made to GitHub's API is in the routes, and to test that I used Protractor to successfully make sure that the API works.
@@ -72,7 +72,7 @@ My Travis CI process looks like this:
 
 This way, whatever changes are made must first pass any tests that are written, as well as be linted properly using ESLint. This guarantees that the code is maintained on a long-term basis. 
 
-This also helps other developers if they decide to contribute to this application. Whenever they submit a pull request, Travis will make sure their code is properly formatted and tested, before giving the go-ahead to merge the branch. This makes sure everyone's code is aligned!
+This also helps other developers if they decide to contribute to this application. Whenever they submit a pull request, Travis will make sure their code is properly formatted and tested, before giving the go-ahead to merge the branch. This makes sure everyone's code is aligned.
 
 [1]: https://github-common-language.herokuapp.com/
 [2]: mockups/travisCI.png
