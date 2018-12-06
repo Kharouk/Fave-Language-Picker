@@ -9,7 +9,10 @@ const fetch = require('node-fetch');
 const findCommonLanguage = require('../javascripts/findLanguage');
 
 router.get('/', (req, res) => {
-  res.render('index', { title: 'Github Language Picker', alertMessage: req.session.active });
+  res.render('index', {
+    title: 'Figure Out Your Most Used Language on GitHub',
+    alertMessage: req.session.active,
+  });
 });
 
 router.post('/user', (req, res) => {

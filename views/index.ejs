@@ -14,11 +14,13 @@
       Sorry, that GitHub username doesn't exist. Try again!
   </div>
   <% } %>
-
-  <h1 id="title"><%= title %></h1>
-  <form id="user-form" action="/user" method="POST">
-    <input type="text" name="gitUser" id="git-user" placeholder="Github Username">
-    <input class="submit-user" type="submit" value="Submit">
-  </form>
+  <div class="container vertical-center">
+    <h1 id="title"><%= title %></h1>
+    <form id="user-form" action="/user" method="POST">
+      <input type="text" name="gitUser" id="git-user" placeholder="Github Username">
+      <input class="submit-user btn btn-outline-info" type="submit" value="Submit">
+    </form>
+    <p class="navigate">Created for a Tech Test by <a href="https://github.com/kharouk"> Alex Kharouk.</a></p>
+  </div>
 </body>
 </html>
