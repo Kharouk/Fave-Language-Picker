@@ -12,7 +12,7 @@ describe('Protractor Demo App', () => {
   it('Title: Github Language Picker', () => {
     browser.get('/');
     const title = browser.driver.findElement(by.css('#title')).getText();
-    expect(title).toContain('Github Language Picker');
+    expect(title).toContain('Figure Out Your Most Used Language on GitHub');
   });
 
   it('Search for User', () => {

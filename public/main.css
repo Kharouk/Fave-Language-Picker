@@ -1,0 +1,51 @@
+body {
+  background-color: aliceblue;
+}
+
+#title, #username {
+  font-size: 3em;
+  color: 	#345b5e;
+  display: flex;
+  justify-content: center;
+  order: 1
+}
+
+.vertical-center {
+  margin-top: 20%;
+}
+
+#language {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 3
+}
+
+.navigate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 4;
+}
+
+.navigate > a {
+  margin: 0 3px;
+}
+
+#user-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  order: 2
+}
+
+.submit-user {
+  display: flex;
+  margin: 1%;
+}
+
+#git-user {
+  text-align: center;
+}
