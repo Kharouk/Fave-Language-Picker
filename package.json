@@ -18,10 +18,8 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
-    "flash": "^1.1.0",
     "node-fetch": "^2.3.0",
-    "protractor": "^5.4.1",
-    "puppeteer": "^1.11.0"
+    "protractor": "^5.4.1"
   },
   "devDependencies": {
     "eslint": "^5.9.0",
