@@ -37,9 +37,14 @@ $ npm run webdriver-manager start
 ```
 Keep that server running, and in a separate terminal window run:
 ```bash
+npm start
+```
+This will also start the local development server of the application.
+
+Finally, run the feature tests by typing:
+```bash
 npm run feature-test
 ```
-
 That will open up a Chromium browser and will run through the tests. When you are finished, you may safely close the terminal running the webdriver server.
 
 ## Development Process
