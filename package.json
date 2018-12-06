@@ -11,7 +11,7 @@
     "feature-test": "protractor ./spec/features/config.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alex Kharouk",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
