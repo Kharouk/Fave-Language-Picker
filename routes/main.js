@@ -40,7 +40,8 @@ router.get('/results/', (req, res) => {
   });
 });
 
-router.all('*', (req, res) => {
+// Catch if user visits unknown route:
+router.all('/*', (req, res) => {
   res.redirect('/');
 });
 

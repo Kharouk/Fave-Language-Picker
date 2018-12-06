@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%= title %></title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
   <% if (alertMessage === true) {%>
   <div class="alert alert-danger" role="alert">
       Sorry, that GitHub username doesn't exist. Try again!
@@ -15,7 +16,7 @@
   <% } %>
 
   <h1 id="title"><%= title %></h1>
-  <form action="/user" method="POST">
+  <form id="user-form" action="/user" method="POST">
     <input type="text" name="gitUser" id="git-user" placeholder="Github Username">
     <input class="submit-user" type="submit" value="Submit">
   </form>

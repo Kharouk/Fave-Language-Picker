@@ -1,0 +1,35 @@
+body {
+  background-color: aliceblue;
+  font-size: 2em;
+}
+
+#title, #username {
+  font-size: 3rem;
+  color: 	#345b5e;
+  display: flex;
+  margin-top: 20%;
+  justify-content: center;
+}
+
+#language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigate {
+  font-size: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#user-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#git-user {
+  text-align: center;
+}

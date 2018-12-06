@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title><%= username %></title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
 </head>
 <body>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
 
   <h1 id="username"><%= username %></h1>
-  <p id="language"><%= language %></p>
+  <p id="language"> Their most used language is: <%= language %></p>
 
-  <a href="/">Go Back</a>
+  <a class="navigate" href="/">Go Back</a>
 </body>
 </html>
