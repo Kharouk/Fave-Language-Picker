@@ -3,5 +3,11 @@ node_js:
 - stable
 
 script:
-  - npm test
-  - npm run lint
+- npm test
+- npm run lint
+
+deploy:
+  provider: heroku
+  app: github-common-language
+  api_key:
+    secure: mXJzsx3N4yQoWsvMuHECFcEB6c9Tf6NZbeFo8VGOgvLYwh8hV1tp1fC4RNqhm4spJ6a/KmRCMjlp2DS1r5t81WpoDGxTLiiih3fl5bRYWdx8J/q6AOrC8GqeTunwWKflBhDhCfkr01oEJW+QRTPJKxF8qXIMlJiOt0A1ersq/9w2ISIPs4KGRjncBa6DULjeOupIIXoAr89NAFFlrzLnXCRIvKr9m2oYYp3peXuOoYO9s8ZfIX2z7QL1NHje/A466+Tdo01Xi/3oK0rJ/74YkY6A+daDb8SwPY1r/7u6ibyAPPNyo1INJSbLdmEN0psiUu0c45fHguUJH3JNcEcSa4WzJ0Vsvqd+eTpB+RhuX+SLxxy+smk2mXWe4cRVuqC0sA26RlGK5SvSjxBwUb2rkWKCzHJcBNGYmU8zcRiIudN676RBFpzgiISIcJtoHZtg1KYJhObupE2EyBWGXJ+7CKGwWc7wViCakIeIcQhYRteAIuuYwTj4ioBfeSXou7oj18GuEEKkz/S4WRHw3aK8wuhZA0+WrK56GTIYYDkLi5VMmT2K6bTSqanLtahUTr1bXj6J1iKgz1s/2AgMv9TmWWVobvJrO2Emmuj5/g6oFLauA12D6pYHY3i+VRaWW0+RFKbiq0GruFaD13gFxRcfpyzJg8uHRhwT+dtj5G3Yk7I=
